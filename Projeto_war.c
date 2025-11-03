@@ -18,3 +18,22 @@ int main() {
       // Entrada de Territorio
     printf("=== Cadastro de Territórios ===\n\n");    
     
+    
+    for (int i = 0; i < 5; i++) {
+        printf("Cadastro do território %d:\n", i + 1);
+        
+
+        // lê até 29 caracteres, incluindo espaços
+        printf("Digite o nome do território: ");
+        scanf(" %29[^\n]", territorios[i].nome); 
+
+        // lê até 9 caracteres (sem espaços)
+        printf("Digite a cor do exército: ");
+        scanf(" %9s", territorios[i].cor); 
+
+        printf("Digite a quantidade de tropas: ");
+        scanf("%d", &territorios[i].tropas);
+
+        // pula uma linha entre cadastros
+        printf("\n"); 
+    }
