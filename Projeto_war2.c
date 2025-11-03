@@ -32,3 +32,6 @@ void cadastrarTerritorios(struct Territorio *territorios, int qtd) {
         printf("\n");
     }
 }
+
+
+// Exibir o estado do mapa
