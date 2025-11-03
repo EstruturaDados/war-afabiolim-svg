@@ -51,28 +51,28 @@ void exibirMapa(struct Territorio *territorios, int qtd) {
 // Batalha entre dois territórios
 void simularBatalha(struct Territorio *atacante, struct Territorio *defensor) {
     if (atacante->tropas <= 0) {
-        printf("⚠️  O território atacante não possui tropas suficientes!\n");
+        printf("  O território atacante não possui tropas suficientes!\n");
         return;
     }
     if (defensor->tropas <= 0) {
-        printf("⚠️  O território defensor já foi conquistado!\n");
+        printf("  O território defensor já foi conquistado!\n");
         return;
     }
 
     int dadoAtacante = (rand() % 6) + 1; // gera número entre 1 e 6
     int dadoDefensor = (rand() % 6) + 1;
 
-    printf("\n🎲 Dados lançados!\n");
+    printf("\n Dados lançados!\n");
     printf("%s (Atacante) tirou: %d\n", atacante->nome, dadoAtacante);
     printf("%s (Defensor) tirou: %d\n", defensor->nome, dadoDefensor);
 
     if (dadoAtacante >= dadoDefensor) {
         // atacante vence
         defensor->tropas--;
-        printf("💥 O atacante venceu a rodada! O defensor perdeu 1 tropa.\n");
+        printf(" O atacante venceu a rodada! O defensor perdeu 1 tropa.\n");
 
         if (defensor->tropas <= 0) {
-            printf("🏴‍☠️ O território %s foi conquistado por %s!\n",
+            printf(" O território %s foi conquistado por %s!\n",
                    defensor->nome, atacante->nome);
              // ocupa com 1 tropa mínima      
             defensor->tropas = 1; 
@@ -81,7 +81,7 @@ void simularBatalha(struct Territorio *atacante, struct Territorio *defensor) {
     } else {
         // defensor vence
         atacante->tropas--;
-        printf("🛡️  O defensor resistiu! O atacante perdeu 1 tropa.\n");
+        printf("  O defensor resistiu! O atacante perdeu 1 tropa.\n");
     }
 }
 
@@ -125,7 +125,7 @@ int main() {
             getchar();
 
             if (at < 1 || at > qtd || def < 1 || def > qtd || at == def) {
-                printf("⚠️  Escolha inválida!\n");
+                printf("  Escolha inválida!\n");
             } else {
                 simularBatalha(&territorios[at - 1], &territorios[def - 1]);
             }
@@ -135,7 +135,7 @@ int main() {
 
     } while (opcao != 0);
 
-    printf("\n👋 Encerrando o jogo. Até a próxima batalha!\n");
+    printf("\n Encerrando o jogo. Até a próxima batalha!\n");
 
     // Libera a memória alocada
     free(territorios);
