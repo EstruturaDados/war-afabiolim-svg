@@ -45,3 +45,32 @@ void exibirMapa(struct Territorio *territorios, int qtd) {
         printf("-----------------------------\n");
     }
 }
+
+// Batalha entre dois territórios
+void simularBatalha(struct Territorio *atacante, struct Territorio *defensor){
+    if (atacante->tropas <= 0){
+        printf("O território atacante não possui tropas suficientes!\n");
+        return;
+
+    }if (defensor->tropas <= 0){
+        printf(" O território defensor já foi conquistado! \n");
+        return;
+
+    }
+    {
+  
+    }
+    
+    {
+        /* code */
+    }
+    
+}
+{
+    /* data */
+};
+
+{
+    /* data */
+};
+)
