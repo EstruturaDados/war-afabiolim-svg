@@ -7,7 +7,7 @@
 // ----------------------------------------------------------
 struct Territorio {
     char nome[30];
-    char cor[15];
+    char cor[10];
     int tropas;
 };
 
