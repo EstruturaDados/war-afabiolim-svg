@@ -10,3 +10,7 @@ struct Territorio {
     char cor[10];
     int tropas;
 };
+
+ // Vetor para armazenar 5 territórios
+int main() {
+    struct Territorio territorios[5];
