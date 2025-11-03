@@ -11,6 +11,8 @@ struct Territorio {
     int tropas;
 };
 
+
+
  // Vetor para armazenar 5 territórios
 int main() {
     struct Territorio territorios[5];
@@ -37,3 +39,18 @@ int main() {
         // pula uma linha entre cadastros
         printf("\n"); 
     }
+
+ // Exibição dos dados
+    printf("\n=== Territórios Cadastrados ===\n\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("Território %d\n", i + 1);
+        printf("Nome: %s\n", territorios[i].nome);
+        printf("Cor do exército: %s\n", territorios[i].cor);
+        printf("Quantidade de tropas: %d\n", territorios[i].tropas);
+        printf("-----------------------------\n");
+    }
+
+    printf("\nFim do programa.\n");
+    return 0;
+}    
