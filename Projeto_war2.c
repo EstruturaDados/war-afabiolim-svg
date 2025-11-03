@@ -89,7 +89,8 @@ void simularBatalha(struct Territorio *atacante, struct Territorio *defensor) {
 // Função principal
 int main() {
     int qtd = 5;
-    srand(time(NULL)); // inicializa gerador aleatório
+    // inicializa gerador aleatório
+    srand(time(NULL)); 
 
     //dinâmica dos territórios
     struct Territorio *territorios = (struct Territorio *)calloc(qtd, sizeof(struct Territorio));
