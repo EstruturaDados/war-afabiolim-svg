@@ -35,3 +35,13 @@ void cadastrarTerritorios(struct Territorio *territorios, int qtd) {
 
 
 // Exibir o estado do mapa
+void exibirMapa(struct Territorio *territorios, int qtd) {
+    printf("\n=== Estado Atual do Mapa ===\n\n");
+    for (int i = 0; i < qtd; i++) {
+         printf("Território %d\n", i + 1);
+        printf("Nome: %s\n", territorios[i].nome);
+        printf("Cor do Exército: %s\n", territorios[i].cor);
+        printf("Tropas: %d\n", territorios[i].tropas);
+        printf("-----------------------------\n");
+    }
+}
