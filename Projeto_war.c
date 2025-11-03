@@ -18,12 +18,7 @@ int main() {
     struct Territorio territorios[5];
 
 
-    // Painel
-    printf("=====================================\n");
-    printf("==========NIVEL NOVATO\n============");
-    printf("=====================================\n\n");
-
-      // Entrada de Territorio
+          // Entrada de Territorio
     printf("=== Cadastro de Territórios ===\n\n");    
     
     
