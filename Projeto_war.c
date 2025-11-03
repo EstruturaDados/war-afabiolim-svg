@@ -20,7 +20,7 @@ int main() {
 
     // Painel
     printf("=====================================\n");
-    printf("   🗺️  DESAFIO WAR ESTRUTURADO - NIVEL NOVATO\n");
+    printf("==========NIVEL NOVATO\n============");
     printf("=====================================\n\n");
 
       // Entrada de Territorio
