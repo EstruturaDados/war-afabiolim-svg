@@ -7,7 +7,7 @@
 // ----------------------------------------------------------
 struct Territorio {
     char nome[30];
-    char cor[10];
+    char cor[15];
     int tropas;
 };
 
@@ -16,6 +16,12 @@ struct Territorio {
  // Vetor para armazenar 5 territórios
 int main() {
     struct Territorio territorios[5];
+
+
+    // Painel
+    printf("=====================================\n");
+    printf("   🗺️  DESAFIO WAR ESTRUTURADO - NIVEL NOVATO\n");
+    printf("=====================================\n\n");
 
       // Entrada de Territorio
     printf("=== Cadastro de Territórios ===\n\n");    
