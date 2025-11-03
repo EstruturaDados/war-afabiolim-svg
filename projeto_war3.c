@@ -36,3 +36,6 @@ void exibirMapa(const struct Territorio *territorios, int qtd) {
     }
     printf("=========================\n");
 }
+
+
+// Ataque de um território contra out
