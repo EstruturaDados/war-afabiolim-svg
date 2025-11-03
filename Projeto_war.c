@@ -14,3 +14,7 @@ struct Territorio {
  // Vetor para armazenar 5 territórios
 int main() {
     struct Territorio territorios[5];
+
+      // Entrada de Territorio
+    printf("=== Cadastro de Territórios ===\n\n");    
+    
