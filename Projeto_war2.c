@@ -58,7 +58,9 @@ void simularBatalha(struct Territorio *atacante, struct Territorio *defensor){
 
     }
     {
-  
+    // gera número entre 1 e 6
+    int dadoAtacante = (rand() % 6) + 1; 
+    int dadoDefensor = (rand() % 6) + 1;
     }
     
     {
