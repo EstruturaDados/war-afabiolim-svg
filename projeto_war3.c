@@ -33,7 +33,7 @@ void inicializaTerritorios(struct Territorio *territorios, int qtd) {
 // Mostra o estado atual de todos os territórios
 // --------------------------------------------------------------
 void exibirMapa(const struct Territorio *territorios, int qtd) {
-    printf("\n=== 🌍 MAPA ATUAL ===\n");
+    printf("\n===  MAPA ATUAL ===\n");
     for (int i = 0; i < qtd; i++) {
         printf("%d. %s | Cor: %s | Tropas: %d\n",
                i + 1, territorios[i].nome, territorios[i].cor, territorios[i].tropas);
@@ -127,7 +127,7 @@ int main() {
     const char *missaoAtual = missoes[rand() % 2];
 
     printf("===========================================\n");
-    printf("     🧠 DESAFIO WAR – NÍVEL MESTRE\n");
+    printf("          NÍVEL MESTRE\n");
     printf("===========================================\n");
     printf("Sua cor: %s\n", corJogador);
     printf("Missão: %s\n", missaoAtual);
@@ -154,7 +154,7 @@ int main() {
                 getchar();
 
                 if (a < 1 || a > qtd || d < 1 || d > qtd || a == d) {
-                    printf("⚠️ Escolha inválida!\n");
+                    printf(" Escolha inválida!\n");
                 } else {
                     simularBatalha(&territorios[a - 1], &territorios[d - 1]);
                 }
@@ -162,10 +162,10 @@ int main() {
             }
             case 2:
                 if (verificarMissao(territorios, qtd, missaoAtual, corJogador)) {
-                    printf("\n🎉 PARABÉNS! Você cumpriu sua missão: %s!\n", missaoAtual);
+                    printf("\n PARABÉNS! Você cumpriu sua missão: %s!\n", missaoAtual);
                     opcao = 0; // encerra o jogo
                 } else {
-                    printf("\n🚧 Missão ainda não concluída. Continue lutando!\n");
+                    printf("\n Missão ainda não concluída. Continue lutando!\n");
                 }
                 break;
 
@@ -174,11 +174,11 @@ int main() {
                 break;
 
             case 0:
-                printf("\n👋 Saindo do jogo. Até a próxima batalha!\n");
+                printf("\n Saindo do jogo. Até a próxima batalha!\n");
                 break;
 
             default:
-                printf("⚠️ Opção inválida!\n");
+                printf(" Opção inválida!\n");
         }
 
     } while (opcao != 0);
