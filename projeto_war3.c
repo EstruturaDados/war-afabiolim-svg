@@ -47,28 +47,28 @@ void exibirMapa(const struct Territorio *territorios, int qtd) {
 // --------------------------------------------------------------
 void simularBatalha(struct Territorio *atacante, struct Territorio *defensor) {
     if (atacante->tropas <= 0) {
-        printf("⚠️ O atacante não possui tropas suficientes!\n");
+        printf(" O atacante não possui tropas suficientes!\n");
         return;
     }
 
     if (defensor->tropas <= 0) {
-        printf("⚠️ O território %s já foi conquistado!\n", defensor->nome);
+        printf(" O território %s já foi conquistado!\n", defensor->nome);
         return;
     }
 
     int dadoAtacante = (rand() % 6) + 1;
     int dadoDefensor = (rand() % 6) + 1;
 
-    printf("\n🎲 Dados lançados!\n");
+    printf("\n Dados lançados!\n");
     printf("Atacante (%s) tirou: %d\n", atacante->nome, dadoAtacante);
     printf("Defensor (%s) tirou: %d\n", defensor->nome, dadoDefensor);
 
     if (dadoAtacante >= dadoDefensor) {
         defensor->tropas--;
-        printf("💥 %s venceu a rodada! O defensor perdeu 1 tropa.\n", atacante->nome);
+        printf(" %s venceu a rodada! O defensor perdeu 1 tropa.\n", atacante->nome);
 
         if (defensor->tropas <= 0) {
-            printf("🏴‍☠️ %s conquistou o território %s!\n",
+            printf(" %s conquistou o território %s!\n",
                    atacante->nome, defensor->nome);
             strcpy(defensor->cor, atacante->cor);
             defensor->tropas = 1;
